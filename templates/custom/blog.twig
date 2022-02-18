@@ -1,8 +1,12 @@
-{#template für startseite#}
+{# spezial-template für eine spezifische unterseite. muss genau die url-titelform als namen haben, z.b. blog.twig #}
 
 {% extends "layouts/base.twig" %}
 {% block content %}
-  <h1>HOME</h1>
+  <h1>{{ page.title }}</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Schreibe hier frei HTML für diese spezifische Seite.</p>
+
+  {#  hier kannst du z.b. auch die liste an beiträgen ausgeben #}
   {% for post in posts %}
     <article>
       <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
